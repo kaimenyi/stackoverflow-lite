@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <meta name="description" content="StackOverFlow-Lite">
+ <meta name="author" content="Haywire">
+		{% if title %}
+			<title>StackoverFlow-Lite - {{ title }}</title>
+		{% else %}
+			<title>StackoverFlow-Lite</title>
+		{% endif %}
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div id="branding">
+				<h1>SOFL - A better world through colaborative programming</h1>	
+		</div>
+		<nav>
+			<ul>
+				<li><a href="{{ url_for('home') }}"></a></li>
+				<li><a href="{{ url_for('register') }}"></a></li>
+				<li><a href="{{ url_for('login') }}"></a></li>
+			</ul>
+		</nav>
+	</div>	
+	{% block content %}{% endblock %}
+	</header>
+</body>
+</html>

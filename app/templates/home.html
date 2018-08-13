@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="container">
+		<div>
+			<h1>The power of Collaborative programming</h1>
+			<p>Things aren't always what they seem, our fears can play tricks on us 
+			making us afraid to change course, afraid to move on, but usually hidden 
+			behind our fears are second chances waiting to be seized, second chances 
+			at almost everything and these opportunities do not come around often, so 
+			when they come around we have to be ready</p>
+		</div>
+	</section>
+	{% for post in posts %}
+		<h1>{{ post.title }}</h1>
+		<p>by {{ post.user }} on {{ post.date }}</p>
+		<p>{{ post.content }}</p>
+	{% endfor %}
+{% endblock content %}
